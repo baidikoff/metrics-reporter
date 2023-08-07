@@ -1,0 +1,15 @@
+spring:
+  aot:
+    enabled: true
+
+management:
+  metrics:
+    enable:
+      jvm: true
+    export:
+      statsd:
+        enabled: true
+        flavor: etsy
+        host: ${STATSD_HOST:"localhost"}
+        port: ${STATSD_PORT:9125}
+        protocol: ${STATSD_PROTOCOL:"udp"}
